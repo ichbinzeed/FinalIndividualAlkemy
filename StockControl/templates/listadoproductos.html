@@ -1,0 +1,23 @@
+{% extends "./baseListas.html" %}
+{% block encabezado %}
+    <th class="text-left text-xl">Nombre</th>
+    <th class="text-left text-xl">Precio</th>
+    <th class="text-left text-xl">Stock</th>
+    <th class="text-left text-xl">Proveedor</th>
+{% endblock %}
+{% block tabla %}
+{% for producto in productos %}
+    <tr class="border-2 border-purple-500  items-center text-lg">
+        <td>{{producto.nombre}}</td>
+        <td>{{producto.precio}}</td>
+        <td>{{producto.stock_actual}}</td>
+        <td>{{producto.proveedor.nombre}}</td>
+    </tr>    
+    
+{% endfor %}
+{% endblock %}
+
+
+
+
+
